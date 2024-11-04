@@ -1,0 +1,23 @@
+'use client'
+
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+
+export function NavLinks() {
+  const pathname = usePathname()
+
+  return (
+    <nav>
+      <Link className={`link ${pathname === '/' ? 'active' : ''}`} href="/">
+        Home
+      </Link>
+
+      <Link
+        className={`link ${pathname === '/pricing' ? 'active' : ''}`}
+        href="/pricing"
+      >
+        Pricing
+      </Link>
+    </nav>
+  )
+}
