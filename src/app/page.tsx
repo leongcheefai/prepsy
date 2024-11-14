@@ -26,7 +26,7 @@ export default function Home() {
             margin="20px auto"
             gap={4}
           >
-            <SelectRoot collection={ingredients} size="lg" p={6}>
+            <SelectRoot collection={ingredients} size="lg" p={6} multiple>
               <SelectTrigger>
                 <SelectValueText placeholder="Select an ingredient" />
               </SelectTrigger>
@@ -38,7 +38,7 @@ export default function Home() {
                 ))}
               </SelectContent>
             </SelectRoot>
-            <Button colorPalette="blue" bgColor="blue.600" color="white" size="lg" variant="solid" width="full">
+            <Button colorPalette="blue" bgColor="black" color="white" size="lg" variant="solid" width="full">
               Submit
             </Button>
           </Box>
