@@ -6,7 +6,7 @@ import {
   SelectTrigger,
   SelectValueText,
 } from "@/components/ui/select"
-// import { Button } from "@/components/ui/button"
+import Recipes from "@/components/Recipes";
 import { Box, Container, createListCollection, Button } from "@chakra-ui/react";
 
 export default function Home() {
@@ -42,6 +42,7 @@ export default function Home() {
               Submit
             </Button>
           </Box>
+          <Recipes />
         <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center"></footer>
     </Container>
   );
