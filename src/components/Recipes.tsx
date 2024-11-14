@@ -11,7 +11,7 @@ export default function Recipes() {
                         <Card.Description>Recipe 1 description</Card.Description>
                     </Card.Body>
                     <Card.Footer justifyContent="flex-end">
-                        <Button bgColor="black" color="white" p={3}>View Recipe</Button>
+                        <Button bgColor="black" color="white" p={3} _hover={{bg: "gray.800"}}>View Recipe</Button>
                     </Card.Footer>
                 </Card.Root>
             </GridItem>
@@ -22,7 +22,7 @@ export default function Recipes() {
                         <Card.Description>Recipe 2 description</Card.Description>
                     </Card.Body>
                     <Card.Footer justifyContent="flex-end">
-                        <Button bgColor="black" color="white" p={3}>View Recipe</Button>
+                        <Button bgColor="black" color="white" p={3} _hover={{bg: "gray.800"}}>View Recipe</Button>
                     </Card.Footer>
                 </Card.Root>
             </GridItem>
@@ -33,7 +33,7 @@ export default function Recipes() {
                         <Card.Description>Recipe 3 description</Card.Description>
                     </Card.Body>
                     <Card.Footer justifyContent="flex-end">
-                        <Button bgColor="black" color="white" p={3}>View Recipe</Button>
+                        <Button bgColor="black" color="white" p={3} _hover={{bg: "gray.800"}}>View Recipe</Button>
                     </Card.Footer>
                 </Card.Root>
             </GridItem>
@@ -44,7 +44,7 @@ export default function Recipes() {
                         <Card.Description>Recipe 4 description</Card.Description>
                     </Card.Body>
                     <Card.Footer justifyContent="flex-end">
-                        <Button bgColor="black" color="white" p={3}>View Recipe</Button>
+                        <Button bgColor="black" color="white" p={3} _hover={{bg: "gray.800"}}>View Recipe</Button>
                     </Card.Footer>
                 </Card.Root>
             </GridItem>

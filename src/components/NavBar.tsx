@@ -41,8 +41,12 @@ export default function NavBar() {
             </MenuTrigger>
             <MenuContent>
                 <MenuItem value="profile">Profile</MenuItem>
-                <MenuItem value="preferences">Preferences</MenuItem>
-                <MenuItem value="logout" color="fg.error">Logout</MenuItem>
+                <MenuItem value="preferences">
+                    <Link href="/profile/preferences">Preferences</Link>
+                </MenuItem>
+                <MenuItem value="logout" color="fg.error">
+                    <Link href="/logout">Logout</Link>
+                </MenuItem>
             </MenuContent>
         </MenuRoot>
         

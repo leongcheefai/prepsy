@@ -32,13 +32,13 @@ export default function Home() {
               </SelectTrigger>
               <SelectContent bg="white" color="black">
                 {ingredients.items.map((ingredient) => (
-                  <SelectItem item={ingredient} key={ingredient.value}>
+                  <SelectItem item={ingredient} key={ingredient.value} _hover={{ bg: "black", color: "white" }}>
                     {ingredient.label}
                   </SelectItem>
                 ))}
               </SelectContent>
             </SelectRoot>
-            <Button colorPalette="blue" bgColor="black" color="white" size="lg" variant="solid" width="full">
+            <Button colorPalette="blue" bgColor="black" color="white" size="lg" variant="solid" width="full" _hover={{bg: "gray.800"}}>
               Submit
             </Button>
           </Box>
