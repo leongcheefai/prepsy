@@ -21,11 +21,9 @@ export default function NavBar() {
       {/* Navigation Menu */}
       <div className="flex-1 flex justify-center space-x-6">
         <Link href="/" className="hover:text-gray-600">Home</Link>
-        <Link href="/dashboard" className="hover:text-gray-600">Dashboard</Link>
         <ChakraLink asChild>
             <Link href="/pricing" className="hover:text-gray-600">Pricing</Link>
         </ChakraLink>
-        <Link href="/projects" className="hover:text-gray-600">Projects</Link>
         <Link href="/about" className="hover:text-gray-600">About</Link>
       </div>
       
