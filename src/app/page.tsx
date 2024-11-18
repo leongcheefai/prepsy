@@ -27,7 +27,7 @@ export default function Home() {
             gap={4}
           >
             <SelectRoot collection={ingredients} size="lg" p={6} multiple>
-              <SelectTrigger>
+              <SelectTrigger clearable>
                 <SelectValueText placeholder="Select an ingredient" />
               </SelectTrigger>
               <SelectContent bg="white" color="black">
