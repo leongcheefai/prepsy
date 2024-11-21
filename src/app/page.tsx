@@ -1,57 +1,41 @@
 "use client"
-import {
-  SelectContent,
-  SelectItem,
-  SelectRoot,
-  SelectTrigger,
-  SelectValueText,
-} from "@/components/ui/select"
+import Form from "next/form";
 import Recipes from "@/components/Recipes";
-import { Box, Container, createListCollection, Button } from "@chakra-ui/react";
+import { Field } from "@/components/ui/field";
+import { Box, Container, Button, Input } from "@chakra-ui/react";
 
 export default function Home() {
+  function handleSubmit(formData: FormData) {
+    const ingredients = formData.get("ingredients");
+  }
+
   return (
     <Container as="div">
+        <Form action={handleSubmit}>
           <Box
-            bg="white"
-            color="black"
-            p={6}
-            borderRadius="lg"
-            boxShadow="lg"
-            display="flex"
-            flexDirection="column"
-            alignItems="center"
-            justifyContent="center"
-            width="full"
-            margin="20px auto"
-            gap={4}
-          >
-            <SelectRoot collection={ingredients} size="lg" p={6} multiple>
-              <SelectTrigger clearable>
-                <SelectValueText placeholder="Select an ingredient" />
-              </SelectTrigger>
-              <SelectContent bg="white" color="black">
-                {ingredients.items.map((ingredient) => (
-                  <SelectItem item={ingredient} key={ingredient.value} _hover={{ bg: "black", color: "white" }}>
-                    {ingredient.label}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </SelectRoot>
-            <Button colorPalette="blue" bgColor="black" color="white" size="lg" variant="solid" width="full" _hover={{bg: "gray.800"}}>
-              Submit
-            </Button>
+                bg="white"
+                color="black"
+                p={6}
+                borderRadius="lg"
+                boxShadow="lg"
+                display="flex"
+                flexDirection="column"
+                alignItems="center"
+                justifyContent="center"
+                width="full"
+                margin="20px auto"
+                gap={4}
+              >
+                <Field label="Ingredients" helperText="Enter ingredients separated by commas">
+                  <Input type="text" name="ingredients" bgColor="gray.100" variant="flushed" />
+                </Field>
+                <Button type="submit" colorPalette="blue" bgColor="black" color="white" size="lg" variant="solid" width="full" _hover={{bg: "gray.800"}}>
+                  Submit
+                </Button>
           </Box>
-          <Recipes />
+        </Form>
+        <Recipes />
         <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center"></footer>
     </Container>
   );
 }
-
-const ingredients = createListCollection({
-  items: [
-    { value: "tomato", label: "Tomato" },
-    { value: "onion", label: "Onion" },
-    { value: "garlic", label: "Garlic" },
-  ],
-});

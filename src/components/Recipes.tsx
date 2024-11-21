@@ -4,7 +4,7 @@ export default function Recipes() {
     return (
     <div>
         <Grid templateColumns="repeat(3, 1fr)" gap={4}>
-            {recipes.items.map((recipe) => (
+            {recipes && recipes.items.map((recipe) => (
                 <GridItem key={recipe.value} colSpan={{base: 3, lg: 2, xl: 1}}>
                     <Card.Root bgColor="white" color="black" height="200px" size="lg">
                     <Card.Body gap={3}>
@@ -20,6 +20,10 @@ export default function Recipes() {
         </Grid>
     </div>
 )}
+
+export async function getRecipes(ingredients: string) {
+    console.log(ingredients);
+}
 
 const recipes = createListCollection({
     items: [
